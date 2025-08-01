@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            font-family:Arial, sans-serif;
+            height: 100vh;
+            margin: 0;
+            background-color: #007bff;
+        }
+        button:hover{
+            background-color:aqua;
+        }
+        form{
+            display:flex;
+            flex-direction: column;
+            padding: 30px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 250px;
+            background-color:white;
+        }
+        label{
+            margin-bottom: 5px
+        }
+        input{
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+         button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+       p{
+      text-align: center;
+    }
+    a {
+      color: #007bff;
+      text-decoration:none;
+    }
+    a:hover{
+      text-decoration: underline;
+    }
+    @media(max-width:600px){
+      form{
+        width: 20%;
+        padding: 20px;
+      }
+    }
+    </style>
+</head>
+<body>
+    <form id="loginForm">
+    <label for="Username">Username:</label>
+    <input type="text" name="Username" id="Username" placeholder="enter user name" required><br>
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password" placeholder="enter password" required><br>
+    <button type="button" onclick="validateForm()">Login</button>
+    <p>Dont have an account<a href="Register.html">  Register</a></p>
+    </form>
+    <script>
+        function validateForm(){
+            var username=document.getElementById("Username").value;
+            var password=document.getElementById("password").value;
+            if(username===""||password===""){
+                alert("both fields are required");
+            }
+            else{
+                alert("login successfull");
+            }
+        }
+    </script>
+</body>
+</html>
