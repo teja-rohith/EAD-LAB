@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>IT-2 Time Table</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: #fff;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    .table thead th {
+      background-color: #333333; 
+      color: white;
+      font-weight: 700;
+      border: 1px solid #333333;
+      text-align: center;
+      vertical-align: middle;
+      padding: 14px;
+    }
+
+    .table tbody td {
+      background-color: #fff;
+      color: #000;
+      border: 1px solid #333333;
+      text-align: center;
+      vertical-align: middle;
+      font-weight: 600;
+      padding: 12px 10px;
+    }
+
+    .lunch {
+      background-color: #f2f2f2 !important;
+      color: #333333;
+      font-weight: 700;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      letter-spacing: 1px;
+      padding: 6px;
+      border: 1px solid #333333;
+    }
+
+    .table tbody tr:hover td {
+      background-color: #ffeeee; 
+      transition: background-color 0.2s ease;
+    }
+
+    .muted {
+      color: #333;
+      font-weight: 600;
+    }
+    .sub-small {
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 8px 6px;
+    }
+    @media (max-width:767px){
+      .table thead th small{display:none}
+      .table tbody td{font-size:.95rem; padding:10px;}
+    }
+  </style>
+</head>
+<body>
+  <div class="container my-5">
+    <h3 class="text-center mb-3 fw-bold">Time Table</h3>
+
+    <div class="table-responsive">
+      <table class="table align-middle">
+        <thead>
+          <tr>
+            <th>Day / Time</th>
+            <th>9:10 - 10:10<br><small>(I)</small></th>
+            <th>10:10 - 11:10<br><small>(II)</small></th>
+            <th>11:15 - 12:15<br><small>(III)</small></th>
+            <th>12:15 - 1:00</th> <!-- Lunch -->
+            <th>1:00 - 2:00<br><small>(IV)</small></th>
+            <th>2:00 - 3:00<br><small>(V)</small></th>
+            <th>3:05 - 4:05<br><small>(VI)</small></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td><strong>MONDAY</strong></td>
+            <td class="muted">EAD</td>
+            <td class="muted">SE</td>
+            <td class="muted">EAD LAB (B1) / CN LAB (B2)</td>
+            <td class="lunch" rowspan="8">LUNCH<br>BREAK</td>
+            <td class="muted">EAD LAB (B1) / CN LAB (B2)</td>
+            <td class="muted">PE-2</td>
+            <td class="muted">CN</td>
+          </tr>
+          <tr>
+            <td><strong>TUESDAY</strong></td>
+            <td class="muted">CN</td>
+            <td class="muted">EAD</td>
+            <td class="muted">ML</td>
+            <td class="muted">FLAT</td>
+            <td colspan="2" class="muted">ML LAB (B1) / CT LAB (B2)</td>
+          </tr>
+          <tr>
+            <td rowspan="2"><strong>WEDNESDAY</strong></td>
+            <td rowspan="2" class="muted">PE-2</td>
+            <td rowspan="2" class="muted">FLAT</td>
+            <td rowspan="2" class="muted">ML</td>
+            <td rowspan="2" class="muted">SE</td>
+            <td colspan="2" class="muted sub-small">CC LAB (B1)</td>
+          </tr>
+          <tr>
+            <td class="muted">LIBRARY (B2)</td>
+            <td class="muted">SPORTS (B2)</td>
+          </tr>
+          <tr>
+            <td rowspan="2"><strong>THURSDAY</strong></td>
+            <td colspan="2" rowspan="2" class="muted">ML LAB (B2) / CT LAB (B1)</td>
+            <td rowspan="2" class="muted">CN</td>
+            <td rowspan="2" class="muted">EAD</td>
+            <td class="muted">LIBRARY (B1)</td>
+            <td class="muted">SPORTS (B1)</td>
+          </tr>
+          <tr>
+            <td colspan="2" class="muted sub-small">CC LAB (B2)</td>
+          </tr>
+          <tr>
+            <td><strong>FRIDAY</strong></td>
+            <td class="muted">SE</td>
+            <td class="muted">ML</td>
+            <td class="muted">FLAT</td>
+            <td class="muted">PE-2</td>
+            <td colspan="2" class="muted">EAD LAB (B2) / CN LAB (B1)</td>
+          </tr>
+          <tr>
+            <td><strong>SATURDAY</strong></td>
+            <td class="muted">MENTORING</td>
+            <td colspan="6" class="muted">—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</body>
+</html>
