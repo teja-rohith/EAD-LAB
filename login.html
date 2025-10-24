@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            margin: 0;
+            background-image: url('background-image: url('file:///D:/308/abstract-square-interface-modern-background-concept-fingerprint-digital-scanning-visual-security-system-authentication-login-vector.jpg');'); /* Background image URL */
+            background-size: cover;
+            background-position: center;
+            color: white; /* Text color adjusted for visibility */
+        }
+        button:hover {
+            background-color: aqua;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 250px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for form */
+        }
+        label {
+            margin-bottom: 5px;
+            color: #333; /* Dark text for labels */
+        }
+        input {
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        p {
+            text-align: center;
+            color: white; /* Adjusted to white */
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            form {
+                width: 80%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form id="loginForm">
+        <label for="Username">Username:</label>
+        <input type="text" name="Username" id="Username" placeholder="Enter username" required><br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" placeholder="Enter password" required><br>
+        <button type="button" onclick="validateForm()">Login</button>
+        <p>Don't have an account? <a href="Register.html">Register</a></p>
+    </form>
+    <script>
+        function validateForm(){
+            var username = document.getElementById("Username").value;
+            var password = document.getElementById("password").value;
+            if(username === "" || password === "") {
+                alert("Both fields are required");
+            } else {
+                alert("Login successful");
+            }
+        }
+    </script>
+</body>
+</html>
